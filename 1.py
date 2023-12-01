@@ -9,7 +9,7 @@ def silverstar():
         nums.append(chars[0]*10 + chars[-1])
     
     # 54708 for this input
-    print(sum(nums))
+    return sum(nums)
 
 
 def goldstar():
@@ -55,7 +55,8 @@ def goldstar():
         nums.append(first_real*10 + last_real)
 
     # 54087 for this input
-    print(sum(nums))
+    return sum(nums)
 
 if __name__ == '__main__':
-    silverstar()
+    print(f"Silver star : {silverstar()}")
+    print(f"Gold star : {goldstar()}")
