@@ -55,11 +55,7 @@ def goldstar():
                 numstr = ''
                 stars = []
 
-    sum = 0
-    for onestar in dict_star.values():
-        if len(onestar) == 2:
-            sum += onestar[0] * onestar[1]
-    return sum
+    return sum([useful.product(star) for star in dict_star.values() if len(star) == 2])
 
 if __name__ == '__main__':
     print(f"Silver star : {silverstar()}")
