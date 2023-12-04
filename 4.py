@@ -24,21 +24,17 @@ def silverstar():
 def goldstar():
     numlines = [1]*len(lines)
     for index, line in enumerate(lines):
-        calculated = False
-        for _ in range(numlines[index]):
-            if not calculated:
-                newline = line.split(': ')[1]
-                winning = newline.split(' | ')[0].replace('  ', ' ').split(' ')
-                yours = newline.split(' | ')[1].replace('  ', ' ').split(' ')
+        newline = line.split(': ')[1]
+        winning = newline.split(' | ')[0].replace('  ', ' ').split(' ')
+        yours = newline.split(' | ')[1].replace('  ', ' ').split(' ')
 
-                matches = 0
-                for num in yours:
-                    if num in winning:
-                        matches += 1
-                calculated = True
+        matches = 0
+        for num in yours:
+            if num in winning:
+                matches += 1
             
-            for card in range(index+1, index+matches+1):
-                numlines[card] += 1
+        for card in range(index+1, index+matches+1):
+            numlines[card] += numlines[index]
 
     return sum(numlines)
 
