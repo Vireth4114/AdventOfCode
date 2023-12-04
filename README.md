@@ -5,3 +5,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 1: Why is the gold star so hard wtf, took me 8 bad answers to figure it out
   - Day 2: it's a day 2
   - Day 3: Lucky the numbers didn't touch two stars at the same time cause first solution didn't include that
+  - Day 4: It was so nice compared to the others before, truly a day 4 (plus I was the first in my uni to get it so cool 🕺🕺)
