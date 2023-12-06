@@ -21,14 +21,7 @@ def silverstar(lines=lines_file):
 
 def fastersilver(lines=lines_file):
     races = zip(useful.get_numbers(lines[0]), useful.get_numbers(lines[1]))
-    mult = 1
-    for entry in races:
-        min = (entry[0]-sqrt(entry[0]*entry[0]-4*entry[1]))/2
-        max = (entry[0]+sqrt(entry[0]*entry[0]-4*entry[1]))/2
-        min = min+1 if min.is_integer() else ceil(min)
-        max = max-1 if max.is_integer() else floor(max)
-        mult *= max-min+1
-    return int(mult)
+    return useful.product(floor(sqrt(entry[0]*entry[0]-4*entry[1])) for entry in races)
 
 # Very slow because python
 def goldstar():
