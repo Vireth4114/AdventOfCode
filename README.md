@@ -7,3 +7,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 3: Lucky the numbers didn't touch two stars at the same time cause first solution didn't include that
   - Day 4: It was so nice compared to the others before, truly a day 4 (plus I was the first in my uni to get it so cool 🕺🕺)
   - Day 5: Wtf is this gold star, why did they put a day 20 equivalent in this, incredible I was able to do it although without really coding so it's kinda bad
+  - Day 6: I spent approximately two years to parse the file, other than that very easy (especially the gold star, I added a single line)

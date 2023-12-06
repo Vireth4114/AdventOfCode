@@ -1,3 +1,5 @@
+import re
+
 def get_lines(filename):
     with open(f'input/{filename}', 'r') as file:
         lines = [i[:-1] for i in file.readlines()]
@@ -13,3 +15,6 @@ def product(iterable):
     for element in iterable:
         a *= element
     return a
+
+def get_numbers(line):
+    return list(map(int, re.findall("\d+", line)))
