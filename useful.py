@@ -2,7 +2,7 @@ import re
 
 def get_lines(filename):
     with open(f'input/{filename}', 'r') as file:
-        lines = [i[:-1] for i in file.readlines()]
+        lines = file.read().splitlines()
     return lines
 
 def get_lines_with_newline(filename):
