@@ -10,3 +10,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 6: I spent approximately two years to parse the file, other than that very easy (especially the gold star, I added a single line)
   - Day 7: It took me 25 minutes to realize cards had order (and I really replaced the true values with ordered ones 💀)
   - Day 8: I took 1h45 to do it, just to put a lcm........
+  - Day 9: Very easy for a day 9

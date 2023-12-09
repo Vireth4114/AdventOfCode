@@ -1,4 +1,5 @@
 import useful
+from math import prod
 
 lines = useful.get_lines_with_newline("3.txt")
 
@@ -55,7 +56,7 @@ def goldstar():
                 numstr = ''
                 stars = []
 
-    return sum([useful.product(star) for star in dict_star.values() if len(star) == 2])
+    return sum([prod(star) for star in dict_star.values() if len(star) == 2])
 
 if __name__ == '__main__':
     print(f"Silver star : {silverstar()}")
