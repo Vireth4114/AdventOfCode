@@ -1,4 +1,7 @@
 import useful
+import sys
+
+sys.setrecursionlimit(100000)
 
 lines = useful.get_lines("10.txt")
 
@@ -14,7 +17,7 @@ dict_neighbor = {'|': [(-1, 0), (1, 0)],
 loop = set()
 inside = set()
 
-def loop_through():
+def loop_through(rev_param):
     for idx, line in enumerate(lines):
         if 'S' in line:
             start_pos = tuple([idx, line.index('S')])
@@ -33,19 +36,35 @@ def loop_through():
                 continue
             if true_pos in loop:
                 continue
-            match neighbor:
-                case (0, 1):
-                    inside.add((true_pos[0]-1, true_pos[1]-1))
-                    inside.add((true_pos[0]-1, true_pos[1]))
-                case (0, -1):
-                    inside.add((true_pos[0]+1, true_pos[1]+1))
-                    inside.add((true_pos[0]+1, true_pos[1]))
-                case (1, 0):
-                    inside.add((true_pos[0]-1, true_pos[1]+1))
-                    inside.add((true_pos[0], true_pos[1]+1))
-                case (-1, 0):
-                    inside.add((true_pos[0]+1, true_pos[1]-1))
-                    inside.add((true_pos[0], true_pos[1]-1))
+            if rev_param:
+                match neighbor:
+                    case (0, 1):
+                        inside.add((true_pos[0]+1, true_pos[1]-1))
+                        inside.add((true_pos[0]+1, true_pos[1]))
+                    case (0, -1):
+                        inside.add((true_pos[0]-1, true_pos[1]+1))
+                        inside.add((true_pos[0]-1, true_pos[1]))
+                    case (1, 0):
+                        inside.add((true_pos[0]-1, true_pos[1]-1))
+                        inside.add((true_pos[0], true_pos[1]-1))
+                    case (-1, 0):
+                        inside.add((true_pos[0]+1, true_pos[1]+1))
+                        inside.add((true_pos[0], true_pos[1]+1))
+            else:
+                match neighbor:
+                    case (0, 1):
+                        inside.add((true_pos[0]-1, true_pos[1]-1))
+                        inside.add((true_pos[0]-1, true_pos[1]))
+                    case (0, -1):
+                        inside.add((true_pos[0]+1, true_pos[1]+1))
+                        inside.add((true_pos[0]+1, true_pos[1]))
+                    case (1, 0):
+                        inside.add((true_pos[0]-1, true_pos[1]+1))
+                        inside.add((true_pos[0], true_pos[1]+1))
+                    case (-1, 0):
+                        inside.add((true_pos[0]+1, true_pos[1]-1))
+                        inside.add((true_pos[0], true_pos[1]-1))
+
             start_pos = true_pos
             break
 
@@ -60,7 +79,7 @@ def find_inside(value):
 
 
 if __name__ == '__main__':
-    print(f'Silver star: {len(loop_through())//2}')
+    print(f'Silver star: {len(loop_through(False))//2}')
     inside = inside.difference(loop)
     for value in inside.copy():
         find_inside(value)
