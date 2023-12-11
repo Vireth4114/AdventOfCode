@@ -1,86 +1,59 @@
 import useful
-import sys
 
-sys.setrecursionlimit(100000)
+dirs = [UP := (-1, 0), DOWN := (1, 0), LEFT := (0, -1), RIGHT := (0, 1)]
 
-lines = useful.get_lines("10.txt")
+def rev_dir(dir):
+    return (-dir[0], -dir[1])
 
-dict_neighbor = {'|': [(-1, 0), (1, 0)],
-                 '-': [(0, -1), (0, 1)],
-                 'L': [(-1, 0), (0, 1)],
-                 'J': [(-1, 0), (0, -1)],
-                 '7': [(1, 0), (0, -1)],
-                 'F': [(1, 0), (0, 1)],
-                 'S': [(1, 0), (0, 1), (-1, 0), (0, -1)]}
+lines = useful.get_list_lines("10.txt")
 
+neighbors = {'|': [UP, DOWN],
+             '-': [LEFT, RIGHT],
+             'L': [UP, RIGHT],
+             'J': [UP, LEFT],
+             '7': [DOWN, LEFT],
+             'F': [DOWN, RIGHT]}
 
-loop = set()
-inside = set()
+loop = []
+new_lines = []
 
-def loop_through(rev_param):
-    for idx, line in enumerate(lines):
-        if 'S' in line:
-            start_pos = tuple([idx, line.index('S')])
-            break
-    while True:
-        loop.add(start_pos)
-        for neighbor in dict_neighbor[lines[start_pos[0]][start_pos[1]]]:
-            true_pos = tuple([start_pos[0]+neighbor[0], start_pos[1]+neighbor[1]])
-            if not (0 <= true_pos[0] < len(lines) and 0 <= true_pos[1] < len(lines[0])):
-                continue
-            if lines[true_pos[0]][true_pos[1]] == '.':
-                continue
-            if lines[true_pos[0]][true_pos[1]] == 'S' and len(loop) > 2:
-                return loop
-            if (-1*neighbor[0], -1*neighbor[1]) not in dict_neighbor[lines[true_pos[0]][true_pos[1]]]:
-                continue
-            if true_pos in loop:
-                continue
-            if rev_param:
-                match neighbor:
-                    case (0, 1):
-                        inside.add((true_pos[0]+1, true_pos[1]-1))
-                        inside.add((true_pos[0]+1, true_pos[1]))
-                    case (0, -1):
-                        inside.add((true_pos[0]-1, true_pos[1]+1))
-                        inside.add((true_pos[0]-1, true_pos[1]))
-                    case (1, 0):
-                        inside.add((true_pos[0]-1, true_pos[1]-1))
-                        inside.add((true_pos[0], true_pos[1]-1))
-                    case (-1, 0):
-                        inside.add((true_pos[0]+1, true_pos[1]+1))
-                        inside.add((true_pos[0], true_pos[1]+1))
-            else:
-                match neighbor:
-                    case (0, 1):
-                        inside.add((true_pos[0]-1, true_pos[1]-1))
-                        inside.add((true_pos[0]-1, true_pos[1]))
-                    case (0, -1):
-                        inside.add((true_pos[0]+1, true_pos[1]+1))
-                        inside.add((true_pos[0]+1, true_pos[1]))
-                    case (1, 0):
-                        inside.add((true_pos[0]-1, true_pos[1]+1))
-                        inside.add((true_pos[0], true_pos[1]+1))
-                    case (-1, 0):
-                        inside.add((true_pos[0]+1, true_pos[1]-1))
-                        inside.add((true_pos[0], true_pos[1]-1))
+def silverstar():
+    global new_lines
+    loop = []
 
-            start_pos = true_pos
-            break
+    x, y = [(idx, line.index('S')) for idx, line in enumerate(lines) if 'S' in line][0]
+    s_dirs = [dir for dir in dirs if rev_dir(dir) in neighbors[lines[x+dir[0]][y+dir[1]]]]
 
-def find_inside(value):
-    inside.add(value)
-    for neighbor in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
-        true_pos = tuple([value[0]+neighbor[0], value[1]+neighbor[1]])
-        if not (-1 <= true_pos[0] < len(lines)+1 and -1 <= true_pos[1] < len(lines[0])+1):
-            continue
-        if true_pos not in loop and true_pos not in inside:
-            find_inside(true_pos)
+    new_dir = s_dirs[0]
+    while lines[x+new_dir[0]][y+new_dir[1]] != 'S':
+        loop.append((x, y))
+        neighbors_new = neighbors[lines[x+new_dir[0]][y+new_dir[1]]]
+        x, y = x+new_dir[0], y+new_dir[1]
+        new_dir = neighbors_new[neighbors_new.index(rev_dir(new_dir))-1]
 
+    loop.append((x, y))
+
+    lines[loop[0][0]][loop[0][1]] = list(neighbors.keys())[list(neighbors.values()).index(s_dirs)]
+
+    new_lines = [[' ' for _ in range(len(lines[0]))] for _ in range(len(lines))]
+    for (l, c) in loop:
+        new_lines[l][c] = lines[l][c]
+    return len(loop)//2
+
+def goldstar():
+    count_inside = 0
+    for l in range(len(new_lines)):
+        is_inside = False
+        for c in range(len(new_lines[0])):
+            if new_lines[l][c] == '|' or (new_lines[l][c] in ('7', 'J') and last_first == ('7', 'J').index(new_lines[l][c])):
+                is_inside = not is_inside
+            elif new_lines[l][c] in ('L', 'F'):
+                last_first = ('L', 'F').index(new_lines[l][c])
+            elif is_inside and new_lines[l][c] == ' ':
+                new_lines[l][c] = '#'
+                count_inside += 1
+    return count_inside
 
 if __name__ == '__main__':
-    print(f'Silver star: {len(loop_through(False))//2}')
-    inside = inside.difference(loop)
-    for value in inside.copy():
-        find_inside(value)
-    print(f'Gold star: {len(inside)}')
+    print(f"Silver star: {silverstar()}")
+    print(f"Gold star: {goldstar()}")

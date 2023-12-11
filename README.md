@@ -12,3 +12,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 8: I took 1h45 to do it, just to put a lcm........
   - Day 9: Very easy for a day 9
   - Day 10: WTF, really a rollercoaster of difficulty this year (although I was stoopid)
+  - Day 11: Really nice day
