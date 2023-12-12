@@ -13,3 +13,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 9: Very easy for a day 9
   - Day 10: WTF, really a rollercoaster of difficulty this year (although I was stoopid)
   - Day 11: Really nice day
+  - Day 12: Gold star was really hard because I wasn't doing it in the right way (Shoutouts to @RisingSunLight42 for the nice recursivity and nice code)
