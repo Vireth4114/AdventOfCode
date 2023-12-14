@@ -15,3 +15,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 11: Really nice day
   - Day 12: Gold star was really hard because I wasn't doing it in the right way (Shoutouts to @RisingSunLight42 for the nice recursivity and nice code)
   - Day 13: Pretty nice
+  - Day 14: Really cool day, unfortunately my code isn't very flexible to other inputs
