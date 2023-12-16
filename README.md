@@ -17,3 +17,4 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 13: Pretty nice
   - Day 14: Really cool day, unfortunately my code isn't very flexible to other inputs
   - Day 15: I don't have anything to say
+  - Day 16: 10 minutes bruteforce => Wrong Answer => 15 minutes bruteforce => Right Answer
