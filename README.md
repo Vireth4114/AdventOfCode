@@ -18,6 +18,6 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 14: Really cool day, unfortunately my code isn't very flexible to other inputs
   - Day 15: I don't have anything to say
   - Day 16: 10 minutes bruteforce => Wrong Answer => 15 minutes bruteforce => Right Answer
-  - Day 17: We don't talk about day 17
+  - Day 17: We don't talk about day 17 (I did it 2 days later because didn't know priority queue)
   - Day 18: Didn't know shoelace/pick, banger algorithm
   - Day 19: Really nice day, didn't have too much trouble
