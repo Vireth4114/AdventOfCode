@@ -21,3 +21,8 @@ I forgot to archive it in 2022 so I'm repairing my mistakes
   - Day 17: We don't talk about day 17 (I did it 2 days later because didn't know priority queue)
   - Day 18: Didn't know shoelace/pick, banger algorithm
   - Day 19: Really nice day, didn't have too much trouble
+  - Day 20: Apparently my code for silver worked enough for the silver star but not enough for the gold star so that was interesting
+  - Day 21: Funny geometry (I did cheat a bit)
+  - Day 22: Me when I stop after analyzing one block
+  - Day 23: Nice one, didn't get the nice graph vertex optimization at first but really nice day
+  - Day 24: M A T H
