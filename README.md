@@ -1,7 +1,14 @@
 # AdventOfCode
+
+# 2024
+
+Back at it again heh
+
+# 2023
+
 I forgot to archive it in 2022 so I'm repairing my mistakes
 
-# Thoughts on each day
+## Thoughts on each day
   - Day 1: Why is the gold star so hard wtf, took me 8 bad answers to figure it out
   - Day 2: it's a day 2
   - Day 3: Lucky the numbers didn't touch two stars at the same time cause first solution didn't include that
