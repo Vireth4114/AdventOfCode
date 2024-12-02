@@ -6,7 +6,7 @@ Back at it again heh
 
 ## Thoughts on each day
   - Day 1: Nice easy day 1, I forgor tha abs 💀
-  
+  - Day 2: The site crashed wtf, kinda tedious solution so I made my code funny one-line
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes
