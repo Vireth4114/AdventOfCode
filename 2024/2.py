@@ -4,9 +4,9 @@ lines = [useful.get_numbers(line) for line in useful.get_lines("2")]
 
 def check(line):
     diffs = [j-i for i, j in zip(line[:-1], line[1:])]
-    return all(1 <= abs(diff) <= 3 for diff in diffs) and not min(diffs) < 0 < max(diffs)
+    return all(-3 <= diff <= 3 for diff in diffs) and not min(diffs) < 0 < max(diffs)
 
-def silverstar():
+def silverstar(): 
     return len([line for line in lines if check(line)])
 
 def goldstar():
