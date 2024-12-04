@@ -8,6 +8,8 @@ Back at it again heh
   - Day 1: Nice easy day 1, I forgor tha abs 💀
   - Day 2: The site crashed wtf, kinda tedious solution so I made my code funny one-line
   - Day 3: One regex to govern them all
+  - Day 4: I listed everything for my silver star at first, which was, uhh, stupid
+
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes
