@@ -1,5 +1,10 @@
 import re
 
+def get_lines_pure(filename):
+    with open(f'input/{filename}', 'r') as file:
+        lines = file.read()
+    return lines
+
 def get_lines(filename):
     with open(f'input/{filename}', 'r') as file:
         lines = file.read().splitlines()
@@ -21,4 +26,4 @@ def get_lines_with_newline(filename):
     return lines
 
 def get_numbers(line):
-    return list(map(int, re.findall("-?\d+", line)))
+    return list(map(int, re.findall(r"-?\d+", line)))
