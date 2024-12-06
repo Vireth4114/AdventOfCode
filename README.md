@@ -10,6 +10,7 @@ Back at it again heh
   - Day 3: One regex to govern them all
   - Day 4: I listed everything for my silver star at first, which was, uhh, stupid
   - Day 5: Me when I wanted to do a graph (I'm overcomplicating myself)
+  - Day 6: Python is such a language
 
 # 2023
 

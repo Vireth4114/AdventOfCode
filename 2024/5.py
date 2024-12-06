@@ -1,3 +1,5 @@
+import time
+start = time.time()
 import useful
 from collections import defaultdict
 import random
@@ -17,6 +19,7 @@ for idx_update, update in enumerate(updates):
     for idx in range(size):
         for cmp in range(idx+1, size):
             while True:
+                print(update, idx, cmp)
                 if update[idx] not in tree[update[cmp]]:
                     break
                 falsy.add(idx_update)
@@ -25,3 +28,4 @@ for idx_update, update in enumerate(updates):
 
 print(sum(res[len(res)//2] for idx, res in enumerate(updates) if idx not in falsy))
 print(sum(res[len(res)//2] for idx, res in enumerate(updates) if idx in falsy))
+print(time.time() - start)
