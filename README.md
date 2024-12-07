@@ -11,6 +11,7 @@ Back at it again heh
   - Day 4: I listed everything for my silver star at first, which was, uhh, stupid
   - Day 5: Me when I wanted to do a graph (I'm overcomplicating myself)
   - Day 6: Python is such a language
+  - Day 7: CHAOS CHAOS *Jevil's theme playing* (I really wasn't trying to be fast since I woke up late)
 
 # 2023
 
