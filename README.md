@@ -12,6 +12,7 @@ Back at it again heh
   - Day 5: Me when I wanted to do a graph (I'm overcomplicating myself)
   - Day 6: Python is such a language
   - Day 7: CHAOS CHAOS *Jevil's theme playing* (I really wasn't trying to be fast since I woke up late)
+  - Day 8: Understanding the problem was harder than actually solving it
 
 # 2023
 
