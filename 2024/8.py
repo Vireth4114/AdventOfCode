@@ -14,7 +14,7 @@ for idx, line in enumerate(lines):
 
 def silverstar():
     antinodes = set()
-    for type, places in antennas.items():
+    for places in antennas.values():
         for (x1, y1), (x2, y2) in permutations(places, 2):
             x, y = x1-2*(x1-x2), y1-2*(y1-y2)
             if 0 <= x < SIZE and 0 <= y < SIZE:
