@@ -23,7 +23,7 @@ def silverstar():
 
 def goldstar():
     antinodes = set()
-    for type, places in antennas.items():
+    for places in antennas.values():
         for (x1, y1), (x2, y2) in combinations(places, 2):
             for i in range(-SIZE, SIZE):
                 x, y = x1+i*(x1-x2), y1+i*(y1-y2)
