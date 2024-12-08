@@ -1,6 +1,6 @@
 import useful
 from collections import defaultdict
-from itertools import combinations
+from itertools import combinations, permutations
 
 lines = useful.get_list_lines('8')
 assert len(lines) == len(lines[0])
@@ -15,12 +15,10 @@ for idx, line in enumerate(lines):
 def silverstar():
     antinodes = set()
     for type, places in antennas.items():
-        for (x1, y1), (x2, y2) in combinations(places, 2):
-            for _ in range(2):
-                x, y = x1-2*(x1-x2), y1-2*(y1-y2)
-                if 0 <= x < SIZE and 0 <= y < SIZE:
-                    antinodes.add((x, y))
-                (x1, y1), (x2, y2) = (x2, y2), (x1, y1)
+        for (x1, y1), (x2, y2) in permutations(places, 2):
+            x, y = x1-2*(x1-x2), y1-2*(y1-y2)
+            if 0 <= x < SIZE and 0 <= y < SIZE:
+                antinodes.add((x, y))
     return len(antinodes)
 
 def goldstar():
