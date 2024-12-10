@@ -13,7 +13,8 @@ Back at it again heh
   - Day 6: Python is such a language
   - Day 7: CHAOS CHAOS *Jevil's theme playing* (I really wasn't trying to be fast since I woke up late)
   - Day 8: Understanding the problem was harder than actually solving it
-
+  - Day 9: I don't even want to look at the code to commit it, it's that bad
+  - Day 10: 44 seconds deltatime lmao
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes
