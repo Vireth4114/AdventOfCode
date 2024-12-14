@@ -15,6 +15,10 @@ Back at it again heh
   - Day 8: Understanding the problem was harder than actually solving it
   - Day 9: I don't even want to look at the code to commit it, it's that bad
   - Day 10: 44 seconds deltatime lmao
+  - Day 11: Recursion for the win
+  - Day 12: Weird algo but oh well
+  - Day 13: Gauss-Jordan my bébou
+  - Day 14: I GOT GLOBAL POINTS WHAT PQSLDKFDQSMKLJFSD
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes
