@@ -1,5 +1,12 @@
 # AdventOfCode
 
+# 2025
+
+Updating git fully this year surely 🙏
+
+## Thoughts on each day
+  - Day 1: Can't read bleh
+
 # 2024
 
 Back at it again heh
@@ -20,6 +27,9 @@ Back at it again heh
   - Day 13: Gauss-Jordan my bébou
   - Day 14: I GOT GLOBAL POINTS WHAT PQSLDKFDQSMKLJFSD
   - Day 15: Pwetty visualisation
+  Surely I continued the rest and didn't feel like updating git......
+
+
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes

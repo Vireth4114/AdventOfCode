@@ -1,11 +1,11 @@
 import useful
 
-lines = useful.get_list_lines("1")
+lines = useful.get_lines("1")
 
 silver, gold = 0, 0
 pos = 50
 for line in lines:
-    num = int(''.join(line[1:]))
+    num = int(line[1:])
     for i in range(num):
         if line[0] == 'L':
             pos -= 1
@@ -19,3 +19,4 @@ for line in lines:
 
 print(silver)
 print(gold)
+
