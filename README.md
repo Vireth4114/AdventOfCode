@@ -19,6 +19,7 @@ Back at it again heh
   - Day 12: Weird algo but oh well
   - Day 13: Gauss-Jordan my bébou
   - Day 14: I GOT GLOBAL POINTS WHAT PQSLDKFDQSMKLJFSD
+  - Day 15: Pwetty visualisation
 # 2023
 
 I forgot to archive it in 2022 so I'm repairing my mistakes
