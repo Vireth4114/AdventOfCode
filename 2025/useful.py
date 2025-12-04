@@ -46,3 +46,23 @@ def dijkstra(get_neighbors, start):
                 hq.heappush(heap, (dist + weight, neighbor))
     return distances, previous
     
+def get_neighbors(grid, r, c):
+    neighbors = {}
+    rows, cols = len(grid), len(grid[0])
+    for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+        nr, nc = r + dr, c + dc
+        if 0 <= nr < rows and 0 <= nc < cols:
+            neighbors[(nr, nc)] = grid[nr][nc]
+    return neighbors
+
+def get_with_diag_neighbors(grid, r, c):
+    neighbors = {}
+    rows, cols = len(grid), len(grid[0])
+    for dr in [-1, 0, 1]:
+        for dc in [-1, 0, 1]:
+            if dr == 0 and dc == 0:
+                continue
+            nr, nc = r + dr, c + dc
+            if 0 <= nr < rows and 0 <= nc < cols:
+                neighbors[(nr, nc)] = grid[nr][nc]
+    return neighbors
