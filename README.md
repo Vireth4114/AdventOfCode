@@ -6,6 +6,11 @@ Updating git fully this year surely 🙏
 
 ## Thoughts on each day
   - Day 1: Can't read bleh
+  - Day 2: Did gold before silver but didn't get 3 seconds delta time (also nice refactor lmao)
+  - Day 3: uhhhhhhhhhh ok ig
+  - Day 4: Added new utils cause I forgor how to do get_neighbors
+  - Day 5: Eepy edge cases
+  - Day 6: Nice parsing challenge
 
 # 2024
 
