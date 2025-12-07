@@ -11,6 +11,7 @@ Updating git fully this year surely 🙏
   - Day 4: Added new utils cause I forgor how to do get_neighbors
   - Day 5: Eepy edge cases
   - Day 6: Nice parsing challenge
+  - Day 7: Thought it was free but uh no
 
 # 2024
 
