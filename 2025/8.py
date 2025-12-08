@@ -1,5 +1,6 @@
 import useful
-import networkx as nx
+import heapq
+from collections import Counter
 from math import prod
 
 points = [useful.get_numbers(line) for line in useful.get_lines("8")]
@@ -7,9 +8,7 @@ points = [useful.get_numbers(line) for line in useful.get_lines("8")]
 def get_comp_distance(a, b):
     return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2
 
-G = nx.Graph()
-for idx in range(len(points)):
-    G.add_node(idx)
+table = {i: i for i in range(len(points))}
 
 dist = dict()
 for idx, point in enumerate(points):
@@ -20,12 +19,15 @@ for idx, point in enumerate(points):
 sorted_dist = sorted(dist.items(), key=lambda x: x[1])
 
 i = 0
-while nx.number_connected_components(G) > 1:
+while len(set(table.values())) > 1:
     min_idx, min_idx2 = sorted_dist[i][0]
-    G.add_edge(min_idx, min_idx2)
+    dest, src = table[min_idx], table[min_idx2]
+    for key, value in table.items():
+        if value == src:
+            table[key] = dest
     i += 1
     if i == 1000:
-        print(prod(sorted([len(i) for i in nx.connected_components(G)], reverse=True)[:3]))
+        print(prod(heapq.nlargest(3, Counter(table.values()).values())))
 
 idx, idx2 = sorted_dist[i - 1][0]
 print(points[idx][0] * points[idx2][0])

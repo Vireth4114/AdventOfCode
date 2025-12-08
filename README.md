@@ -12,7 +12,7 @@ Updating git fully this year surely 🙏
   - Day 5: Eepy edge cases
   - Day 6: Nice parsing challenge
   - Day 7: Thought it was free but uh no
-  - Day 8: NetworkX my beloved
+  - Day 8: NetworkX my beloved (maybe not)
 
 # 2024
 
